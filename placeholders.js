@@ -36,7 +36,7 @@
                 link: function (scope, $element, $attributes, $controller) {
                     var  text= $attributes[propName];//get placeholder text;
 
-                    //if (needsShimByNodeName[$element[0].nodeName]) {
+                    if (needsShimByNodeName[$element[0].nodeName]) {
                         // These bound events handle user interaction
                         $element.bind("focus", function () {
                             $element.parent().addClass('placeholder-focus');
@@ -77,7 +77,7 @@
                             
                         
                         
-                    //}
+                    }
                 }
             };
         }
