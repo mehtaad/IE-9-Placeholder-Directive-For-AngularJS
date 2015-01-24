@@ -1,7 +1,7 @@
 # IE-9-Placeholder-Directive-For-AngularJS
 Placeholder for IE works with angularJS 1.3.x 
 
-Old 1.2.x angularJS placeholder directive no longer works with 1.3.x all form related validation were broken once I upgraded to 1.3.x.
+Old 1.2.x angularJS placeholder directive no longer works with 1.3.x all form related validation were broken once I upgraded to 1.3.x. This does not require JQuery.
 This directive works in Ie9 and should also work for other IE version with all version of angularJS.
 
 /**
