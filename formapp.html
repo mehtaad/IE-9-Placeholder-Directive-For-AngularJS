@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="errormsg" >
+<head>
+  <meta charset="utf-8">
+  <title>IE Placeholder</title>
+  <link rel="stylesheet" href="style.css">
+   
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular-animate.js"></script>
+  <script src="app.js"></script>
+  <script src="placeholders.js"></script>
+  
+  
+  </head>
+<body >
+  <h3>Demo Form</h3>
+  
+  <div style="postion:relative" ng-controller="MainCtrl">
+  <form name="mainForm" valid-submit="sendForm()" novalidate>
+    <div> 
+      <label for="firstName">First Name</label>
+      <input  id="firstName" placeholder="First Name" name="firstName" type="text" ng-model="person.firstName" required/>
+      <span class="error" ng-show="mainForm.$submitted && mainForm.firstName.$error.required">required {{setFirstnameError()}}</span>
+    </div>
+    <div>
+      <label for="lastName">Last Name</label>
+      <input placeholder="Last Name"  id="lastName" name="lastName" type="text" ng-model="person.lastName" required/>
+      <span class="error" ng-show="mainForm.$submitted && mainForm.lastName.$error.required">required</span>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" ng-model="person.email" required/>
+      <span class="error" ng-show="mainForm.$submitted && mainForm.email.$error.required">required</span>
+      <span class="error" ng-show="mainForm.$submitted && mainForm.email.$error.email">invalid email</span>
+    </div>
+    <div>
+      <input type="checkbox" ng-model="agreedToTerms" 
+        name="agreedToTerms" id="agreedToTerms" required/>
+      <label for="agreedToTerms">I agree to the terms</label>
+      <span class="error" ng-show="mainForm.$submitted && mainForm.agreedToTerms.$error.required">You must agree to the terms</span>
+    </div>
+    <div>
+      <button ng-disabled="mainForm.$submitted && !mainForm.$valid" type="submit">Submit!</button>
+	  <button ng-click="removebar($event)">Remove!</button>
+    </div>
+  </form>
+ 
+  
+  </div>
+</body>
+</html>

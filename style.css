@@ -1,0 +1,24 @@
+/* Put your css in here */
+
+/*
+Place holder related classes for ie9
+
+*/
+.placeholderWrap{
+position: relative;
+    }
+.placeholderWrap2{
+    color: #000;
+    position: absolute; 
+    left: 10px; /* Might have to adjust this based on font-size */
+    pointer-events: none;
+    display: block;
+}
+
+.placeholder-focus label{color: #999;}/* could use a css animation here if desired*/
+.placeholder-changed label{
+    display: none;
+}
+/*
+Place holder related classes for ie9
+*/
